@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+Inscripcion <|-- Alumno
+Inscripcion <|-- Materia
+
+'Materia --*> Alumno
+Alumno <--* Materia
+
+class Alumno {
+
+}
+
+class Materia {
+
+}
+
+Interface Inscripcion {
+aprobada()
+}
+@enduml
