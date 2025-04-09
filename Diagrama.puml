@@ -1,26 +1,19 @@
 @startuml
-'https://plantuml.com/class-diagram
+Inscripcion --> Alumno
+Inscripcion --> Materia
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-Inscripcion <|-- Alumno
-Inscripcion <|-- Materia
-
-'Materia --*> Alumno
-Alumno <--* Materia
+Materia -> Materia
+Alumno -> Materia
 
 class Alumno {
-
+boolean aproboCorrelativasDe(Materia)
 }
 
 class Materia {
 
 }
 
-Interface Inscripcion {
-aprobada()
+class Inscripcion {
+boolean aprobada()
 }
 @enduml
